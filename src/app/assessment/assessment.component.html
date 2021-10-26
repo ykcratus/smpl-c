@@ -1,0 +1,257 @@
+<app-inner-header></app-inner-header>
+<div class="main-container">
+    <div class="body-wrapper">
+        <div class="title">
+            <h1>Demo- Level - 3</h1>
+        </div>
+
+        <div class="chart-container">
+            <ul>
+                <li>
+                    <div class="chart-section">
+                        <canvas baseChart height="280"
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [options]="doughnutChartOptions" 
+                [colors]="doughnutChartColors" 
+                [chartType]="doughnutChartType"></canvas>
+
+                        <h2>Completion Status</h2>
+                    </div>
+                </li>
+                <li>
+                    <img src="../../assets/images/cmmc.png" class="cmmc-img" />
+                    <img src="../../assets/images/cmmc-graph-img.jpg" />
+                </li>
+                <li>
+                    <div class="chart-section">
+                        <canvas baseChart height="280"
+                                [datasets]="barChartData"
+                                [colors]="chartColors" 
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType">
+                        </canvas>
+                        <h2>Can Pass Certification</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-container">
+            <ul>
+                <li>
+                    <select>
+                        <option>Select Status</option>
+                    </select>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="box__left">
+                            Modified Date &#38; Time
+                        </div>
+                        <div class="box__right">
+                            <i class="fa primary">&#xf017;</i>
+                            <span class="box__date">29-06-2021</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="box__left">
+                            Created Date &#38; Time
+                        </div>
+                        <div class="box__right">
+                            <i class="fa primary">&#xf017;</i>
+                            <span class="box__date">29-06-2021</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list-container">
+            <div class="list-container__item">
+                <div class="list-container__item__controls">
+                    <ul>
+                        <li>
+                            <i class="fa danger">&#xf071;</i>
+                        </li>
+                        <li>
+                            <button class="secondary">Access Control</button>
+                        </li>
+                        <li>
+                            <i class="fa primary">&#xf023;</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="box__left">
+                        <i class="fa primary">&#xf133;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                    <div class="box__right">
+                        <i class="fa primary">&#xf017;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                </div>
+                <div class="list-container__item__count">
+                    1 of 31 Questions Completed
+                </div>
+                <div class="list-container__item__progress">
+                    <div class="list-container__item__progress__bar">
+                        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+                    </div>
+                    <div class="list-container__item__progress__value">
+                        <span class="secondary">{{progress}}%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-container__item">
+                <div class="list-container__item__controls">
+                    <ul>
+                        <li>
+                            <i class="fa danger">&#xf071;</i>
+                        </li>
+                        <li>
+                            <button class="primary">Asset Management</button>
+                        </li>
+                        <li>
+                            <i class="fa primary">&#xf023;</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="box__left">
+                        <i class="fa primary">&#xf133;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                    <div class="box__right">
+                        <i class="fa primary">&#xf017;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                </div>
+                <div class="list-container__item__count">
+                    1 of 31 Questions Completed
+                </div>
+                <div class="list-container__item__progress">
+                    <div class="list-container__item__progress__bar">
+                        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+                    </div>
+                    <div class="list-container__item__progress__value">
+                        <span class="secondary">{{progress}}%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-container__item">
+                <div class="list-container__item__controls">
+                    <ul>
+                        <li>
+                            <i class="fa danger">&#xf071;</i>
+                        </li>
+                        <li>
+                            <button class="primary">Audit &#38; Accountability</button>
+                        </li>
+                        <li>
+                            <i class="fa primary">&#xf023;</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="box__left">
+                        <i class="fa primary">&#xf133;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                    <div class="box__right">
+                        <i class="fa primary">&#xf017;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                </div>
+                <div class="list-container__item__count">
+                    1 of 31 Questions Completed
+                </div>
+                <div class="list-container__item__progress">
+                    <div class="list-container__item__progress__bar">
+                        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+                    </div>
+                    <div class="list-container__item__progress__value">
+                        <span class="secondary">{{progress}}%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-container__item">
+                <div class="list-container__item__controls">
+                    <ul>
+                        <li>
+                            <i class="fa danger">&#xf071;</i>
+                        </li>
+                        <li>
+                            <button class="normal">Awareness &#38; Training</button>
+                        </li>
+                        <li>
+                            <i class="fa primary">&#xf023;</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="box__left">
+                        <i class="fa primary">&#xf133;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                    <div class="box__right">
+                        <i class="fa primary">&#xf017;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                </div>
+                <div class="list-container__item__count">
+                    1 of 31 Questions Completed
+                </div>
+                <div class="list-container__item__progress">
+                    <div class="list-container__item__progress__bar">
+                        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+                    </div>
+                    <div class="list-container__item__progress__value">
+                        <span class="secondary">{{progress}}%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-container__item">
+                <div class="list-container__item__controls">
+                    <ul>
+                        <li>
+                            <i class="fa danger">&#xf071;</i>
+                        </li>
+                        <li>
+                            <button class="normal">Configuration Managment</button>
+                        </li>
+                        <li>
+                            <i class="fa primary">&#xf023;</i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="box__left">
+                        <i class="fa primary">&#xf133;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                    <div class="box__right">
+                        <i class="fa primary">&#xf017;</i>
+                        <span class="box__date">29-06-2021</span>
+                    </div>
+                </div>
+                <div class="list-container__item__count">
+                    1 of 31 Questions Completed
+                </div>
+                <div class="list-container__item__progress">
+                    <div class="list-container__item__progress__bar">
+                        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+                    </div>
+                    <div class="list-container__item__progress__value">
+                        <span class="secondary">{{progress}}%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

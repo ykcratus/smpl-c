@@ -1,0 +1,14 @@
+@import '../../../styles/imports';
+
+.logo{
+  margin: 20px 0 10px 0;
+  text-align: center;
+  img{
+    @include mq-breakpoint-md(){
+      max-width: 200px;
+    }
+    @include mq-breakpoint-xl(){
+      max-width: 250px;
+    }
+  }
+}

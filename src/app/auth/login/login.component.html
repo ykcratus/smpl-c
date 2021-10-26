@@ -1,0 +1,49 @@
+
+<div class="main-container">
+    <div class="login-box">
+        <div class="login-box__left">
+            <img src="../../assets/images/login-img.svg" />
+            <div class="logo-description">
+                Please read the <a href="#">Terms of Service ("Terms")</a> and <a href="#">Data Processing Addendum (“DPA”)</a> carefully before using the SMPL-C application. Your access to and use of the application is conditioned upon your acceptance of and compliance with these Terms and DPA. These Terms and DPA apply to all visitors, users and others who wish to access or use the application.
+            </div>
+        </div>
+        <div class="login-box__right">
+            <div class="logo">
+                <img src="../../assets/images/logo.png" />
+            </div>
+            <h1>Welcome Back !</h1>
+            <h2>Sign in to continue to SMPL-C</h2>
+            <div class="login-form">
+                <form [formGroup]="loginForm" novalidate >
+                                        <div class="error-msg"
+                        *ngIf="loginForm.get('email').invalid && loginForm.get('email').errors && 
+                        (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                        <small class="text-danger" *ngIf="loginForm.get('email').hasError('required')">
+                            This field is required.
+                        </small>
+                    </div>
+                    <input type="text" formControlName="email" placeholder="Enter email Id *" class="mb" />
+                    <div class="error-msg" *ngIf="loginForm.get('password').invalid && loginForm.get('password').errors && 
+                                                                (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                        <small class="text-danger" *ngIf="loginForm.get('password').hasError('password')">
+                            This field is required.
+                        </small>
+                    </div>
+                    <input type="password" formControlName="password" placeholder="Enter password *" />
+                  
+                    <div class="forgot-margin-top">
+                        <div class="box">
+                            <label>
+                                <input type="checkbox" name="remember"> Remember me
+                              </label>
+                        </div>
+                        <div class="box text-right">
+                            <a  [routerLink]="['/forgot-password']">Forget Password?</a>
+                        </div>
+                    </div>
+                    <button type="button" (click) ="onSubmit()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

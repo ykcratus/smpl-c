@@ -1,0 +1,81 @@
+@import '../../../styles/imports';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+::ng-deep {
+  .mat-dialog-container{
+    border-radius: 20px;
+  }
+  h1{
+    font-size: 20px;
+    font-weight: bold !important;
+    color: $primary-color;
+    font-family: "Roboto";
+    padding-left: 10px;
+    margin: 0px 0 40px 0!important;
+  
+    @include mq-breakpoint-xl(){
+      font-size: 30px;
+    }
+  }
+  input[type='text'],
+  select{
+    @include input();
+    background: #fff;
+  }
+}
+.manage-user-container{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  max-width: 1000px;
+  min-width: 700px;
+  display: flex;
+  padding: 25px 20px;
+    
+
+    &__form{
+      width: 65%;
+      
+      .form-field{
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        &__box{
+          margin-bottom: 20px;
+          ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: inline-flex;
+            li{
+              margin-right: 10px;
+              &:last-child{
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        &__input{
+          width: 100%;
+          margin:0 0 20px 0;
+        }
+      }
+      .bottom-container{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        button{
+          min-width: 170px;
+        }
+        ::ng-deep button.cancel{
+          @include cancel-button();
+          margin-left: 25px;
+        }
+      }
+    }
+    &__image{
+      width:35%;
+      text-align: right;
+      justify-content: flex-end;
+    }
+  
+}

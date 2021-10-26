@@ -1,0 +1,237 @@
+@import '../../../styles/imports';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+::ng-deep{ 
+  h1{
+    font-size: 20px;
+    font-weight: bold !important;
+    color: $primary-color;
+    font-family: "Helvetica";
+    padding-left: 10px;
+    margin: 0px !important;
+  
+    @include mq-breakpoint-xl(){
+      font-size: 30px;
+    }
+  }
+  button{
+    @include primary-button();
+    text-transform: capitalize;
+    white-space: nowrap;
+    padding-left: 40px;
+    padding-right: 40px;
+    i.fa-user{
+      font-size: 22px;
+      margin-right: 10px;
+    }
+  }
+
+  button.draft{
+    @include draft-button();
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  button.in-progress{
+    @include in-progress-button();
+    text-transform: capitalize;
+    white-space: nowrap;
+    padding:5px 10px;
+  }
+  button.success{
+    @include success-button();
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+}
+.search-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &__title,
+  &__search{
+    width: 50%;
+    align-items: center;
+  }
+  &__search{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    form{
+      max-width: 400px;
+      width: $width-100;
+      position: relative;
+      &::after{
+        position: absolute;
+        content: '';
+        right:75px;
+        background: $color-white;
+        height: 50px;
+        width: 10px;
+        z-index: 1;
+      }
+    }
+    input[type=text] {
+      padding: 10px 10px 10px 20px;
+      font-size: 14px;
+      border:0;
+      border-radius: 10px 0px 0px 10px;
+      width: 80%;
+      height: 50px;
+      box-shadow: 0px 0px 8px #00000021;
+    }
+    button {
+      width: 20%;
+      padding: 10px;
+      background: transparent;
+      color: $color-grey;
+      font-size: 17px;
+      border: 0;
+      height: 50px;
+      border-radius: 0px 10px 10px 0px;
+      box-shadow: 0px 0px 8px #00000021;
+      border-left: none;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    }
+  }
+
+
+}
+
+.list-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__item{
+    box-shadow: 0px 0px 15px #00000029;
+    border-radius: 10px;
+    padding: 15px;
+    width: $width-100;
+    margin: 15px;
+    max-width: 350px;
+    font-size: 13px;
+    
+    &__inner-list{
+      ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+          padding: 0;
+          display: inline-flex;
+          width: $width-100;
+        }
+      }
+      .left{
+        width: calc(100% - 40px);
+        .card-box{
+          .box{
+            display: flex;
+            width: $width-100;
+            .sub-box{
+              width: 60%;
+              &:last-child{
+                width: 40%;
+              }
+              img{
+                width: 60px;
+              }
+              ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                li{
+                  padding: 1px 0 2px 0;
+                  width: $width-100;
+                  &:last-child{
+                    font-weight: bold;
+                  }
+                  &.pb{
+                    padding-bottom: 5px;
+                  }
+                }
+                
+              }
+            }
+          }
+
+          .box-2{
+            display: flex;
+            width: $width-100;
+            margin-top: 30px;
+            .sub-box{
+              width: 40%;
+              &:first-child{
+                width: 31%;
+              }
+              &:last-child{
+                width: 29%;
+              }
+              ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                li{
+                  padding: 1px 0 1px 0;
+                  width: $width-100;
+                  
+                  &:last-child{
+                    font-weight: bold;
+                  }
+                  
+                }
+                
+              }
+            }
+          }
+        }
+      }
+      .right{
+        width: 40px;
+        background: #F6F9FF;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        .edit{
+          color: $primary-color;
+          cursor: pointer;
+        }
+        .message{
+          color: $secondary-color;
+          cursor: pointer;
+        }
+        .lock{
+          color: $color-green;
+          cursor: pointer;
+        }
+
+        ul{
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          li{
+            padding: 11px 0;
+            width: $width-100;
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// ITCSS structure
+// Original post by Harry Roberts https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+// 01. Settings
+
+@import './settings/settings.breakpoints';
+
+@import './settings/settings.colors';
+
+@import './settings/variables';
+
+@import './settings/material-mixins';
+
+@import './settings/global';
+
+// 02. Tools
+@import './tools/tools.mediaquery';
+
+

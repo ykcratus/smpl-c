@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+::ng-deep html, body { 
+  margin: 0; 
+  background: url('../assets/images/background.svg') no-repeat center bottom #F9F9F9;
+  background-size: cover;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+::ng-deep .main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 100%;
+  position: relative;
+  margin: 0px auto;
+  background:#F9F9F9;
+}
+
+::ng-deep .body-wrapper{
+  background:#fff;
+  max-width: 1200px;
+  width: 100%;
+  margin:20px auto 30px auto;
+  border-radius: 20px;
+  padding: 30px 30px;
+  box-shadow: 0px 0px 16px #0000000F;
+}

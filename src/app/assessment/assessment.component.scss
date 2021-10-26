@@ -1,0 +1,241 @@
+@import '../../styles/imports';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+::ng-deep{ 
+  h1{
+    font-size: 20px;
+    font-weight: bold !important;
+    color: $primary-color;
+    font-family: "Roboto";
+    padding-left: 10px;
+    margin: 0px !important;
+  
+    @include mq-breakpoint-xl(){
+      font-size: 30px;
+    }
+  }
+  h2{
+    font-size: 20px;
+    font-weight: bold !important;
+    color: $primary-color;
+    font-family: "Roboto";
+    padding-left: 10px;
+    margin: 10px 0 0 0 !important;
+    text-align: center;
+  
+    @include mq-breakpoint-xl(){
+      font-size: 20px;
+    }
+  }
+  button{
+    @include primary-button();
+    text-transform: capitalize;
+    white-space: nowrap;
+    padding-left: 40px;
+    padding-right: 40px;
+    i.fa-user{
+      font-size: 22px;
+      margin-right: 10px;
+    }
+  }
+  .mat-progress-bar-fill::after{
+    background-color: #BEBEBE;
+    border-radius: 5px;
+  }
+  select{
+    @include input();
+    background: #fff;
+  }
+}
+
+.title{
+  display: flex;
+  align-items: center;
+}
+
+.chart-container{
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: $width-100;
+    li{
+      width: calc(50% - 125px);
+      margin: 30px 15px 15px 15px;
+
+      &:nth-child(2){
+        width: 250px;
+        text-align: center;
+        .cmmc-img{
+          width: 180px;
+          margin: 50px 0 40px 0;
+        }
+      }
+
+      .chart-section{
+        box-shadow: 0px 0px 15px #00000029;
+        border-radius: 10px;
+        padding: 40px 20px;
+        width: $width-100;
+        min-height: 400px;
+        background: $color-white;
+      }
+    }
+  }
+}
+
+
+.box{
+  display: flex;
+  margin-top: 20px;
+  &__left,
+  &__right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i.fa{
+      font-size: 18px;
+    }
+  }
+  &__date{
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}
+
+.filter-container{
+  width: $width-100;
+  margin: 50px 0 20px 0;
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    li{
+      padding: 0 30px;
+      &:first-child{
+        padding-left: 0;
+      }
+      .box{
+        margin-top: 0;
+        flex-direction: column;
+        &__left{
+          padding-bottom: 5px;
+        }
+        &__left,
+        &__right{
+          width: $width-100;
+        }
+      }
+    }
+  }
+}
+
+.list-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__item{
+    box-shadow: 0px 0px 15px #00000029;
+    border-radius: 10px;
+    padding: 20px;
+    width: $width-100;
+    margin: 15px;
+    max-width: 350px;
+    min-height: 150px;
+    background: $color-white;
+    &__controls{
+      ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        width: $width-100;
+        align-items: center;
+        li{
+          padding: 0;
+          margin: 0 15px;
+          width: calc(100% - 60px);
+          display: inline-flex;
+          justify-content: center;
+          &:first-child{
+            width: 35px;
+            margin: 0;
+            i.fa{
+              font-size: 25px;
+            }
+          }
+          &:last-child{
+            width: 25px;
+            margin: 0;
+            i.fa{
+              font-size: 30px;
+            }
+          }
+          button{
+            font-size: 14px;
+            padding: 8px 15px;
+            &.primary{
+              @include primary-label();
+            }
+            &.secondary{
+              @include secondary-label();
+            }
+            &.normal{
+              @include normal-label();
+            }
+          }
+        }
+      }
+    }
+    
+
+    &__count{
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 30px 0 10px 0;
+    }
+
+    &__progress{
+      border-radius: 10px;
+      border: 2px solid #BEBEBE;
+      padding: 1px 6px;
+      display: flex;
+      width: $width-100;
+      align-items: center;
+      line-height: normal;
+      &__bar{
+        width: calc(100% - 30px);
+      }
+      &__value{
+        width: 30px;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: right;
+      }
+    }
+    .primary{
+      color: $primary-color;
+    }
+    .secondary{
+      color: $color-orange;
+    }
+    .success{
+      color: $color-green;
+    }
+    .danger{
+      color: $color-red;
+    }
+    .normal{
+      color: $color-grey;
+    }
+  }
+}
