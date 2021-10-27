@@ -66,7 +66,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     SelfAssessmentDashbroadComponent,
     AssessmentComponent],
   providers: [
-    //{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    //f{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
