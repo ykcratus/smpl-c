@@ -33,6 +33,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ChartsModule } from 'ng2-charts';
 import { AuthInterceptor } from './auth/auth.interceptor';
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -66,7 +67,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     SelfAssessmentDashbroadComponent,
     AssessmentComponent],
   providers: [
-    //f{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    //{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

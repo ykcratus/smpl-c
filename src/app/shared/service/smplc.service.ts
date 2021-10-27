@@ -38,5 +38,24 @@ export class SmplcService {
       }));
   }
 
+  assesmentList(param) {
+    return this.http.post(endPoints.subscription, param)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+    updateCompanyDetails(payload) {
+      return this.http.post(endPoints.companyUdate, payload)
+        .pipe(map((response: any) => {
+          return response;
+        }));
+  } 
+    getCompanyDetailsById(payload) {
+      return this.http.post(endPoints.companyById, payload)
+        .pipe(map((response: any) => {
+          return response;
+        }));
+    } 
 
 }

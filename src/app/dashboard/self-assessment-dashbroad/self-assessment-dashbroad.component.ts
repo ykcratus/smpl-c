@@ -285,4 +285,26 @@ export class SelfAssessmentDashbroadComponent {
   templateUrl: 'dialog/self-assessment-dashbroad-dialog.component.html',
   styleUrls:['dialog/self-assessment-dashbroad-dialog.component.scss']
 })
-export class SelfAssessmentDashbroadDialog {}
+export class SelfAssessmentDashbroadDialog {
+  listData: any;
+
+  constructor(private service: SmplcService){}
+
+  ngOnInit() {
+    this.getselfAssesmetList();
+  }
+
+  getselfAssesmetList() {
+    let payload = {
+      "request": {
+        "token": JSON.parse(localStorage.getItem('currentUser')).token,
+      },
+      "pageSize": 0,
+      "pageNumber": 0
+    }
+    this.service.assesmentList(payload).subscribe((res)=> {
+       this.listData = res.items;
+    }, (err)=> {})
+  }
+
+}
