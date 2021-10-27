@@ -9,7 +9,34 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class SmplcService {
 
-  
+  constructor(private http: HttpClient ) {}
 
-  constructor() { }
+  getAllCompanyDetails() {
+    return this.http.get(endPoints.companyAssesment)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+//   {
+//   "email": "something@gmail1.com",
+//   "password": "FAq12345678!"
+// }
+
+  validateUser(param) {
+    return this.http.post(endPoints.vaidateEmail, param)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+
+  getAllAssesmentDetails(param) {
+    return this.http.post(endPoints.dashboard, param)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+
 }

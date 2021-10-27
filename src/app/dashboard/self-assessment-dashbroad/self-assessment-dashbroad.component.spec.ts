@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { UserRegisterComponent } from "./user-register.component";
+import { SelfAssessmentDashbroadComponent } from "./self-assessment-dashbroad.component";
 
 describe("UserRegisterComponent", () => {
-  let component: UserRegisterComponent;
-  let fixture: ComponentFixture<UserRegisterComponent>;
+  let component: SelfAssessmentDashbroadComponent;
+  let fixture: ComponentFixture<SelfAssessmentDashbroadComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [UserRegisterComponent]
+      declarations: [SelfAssessmentDashbroadComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserRegisterComponent);
+    fixture = TestBed.createComponent(SelfAssessmentDashbroadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

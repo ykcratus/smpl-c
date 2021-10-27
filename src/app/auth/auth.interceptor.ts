@@ -26,14 +26,17 @@ export class AuthInterceptor implements HttpInterceptor {
           "Authorization": JSON.parse(localStorage.getItem('currentUser')).token,
         }
       });
+      if (req.method === "POST") {
+          req.body['token'] = JSON.parse(localStorage.getItem('currentUser')).token;
+      }
 
 
     return next.handle(this.authReq).pipe(
       map((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
-          if (event && event.body && event.body.status_code === 500) {
-           alert(event.body.message);
-          }
+          // if (event && event.body && event.body.status_code === 500) {
+          //  alert(event.body.message);
+          // }
         }
         return event;
       }),
