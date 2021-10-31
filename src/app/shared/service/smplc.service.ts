@@ -21,6 +21,7 @@ export class SmplcService {
 //   {
 //   "email": "something@gmail1.com",
 //   "password": "FAq12345678!"
+// email":"stark@yopmail.com","password":"MPLDemo01!
 // }
 
   validateUser(param) {
@@ -57,5 +58,20 @@ export class SmplcService {
           return response;
         }));
     } 
+
+  assessorLoginDetails(payload) {
+    return this.http.post(endPoints.accessorLogin, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+  changePassword(payload) {
+    return this.http.post(endPoints.changePassword, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
 
 }

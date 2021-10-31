@@ -9,13 +9,24 @@
             </div>
         </div>
         <div class="top-section__right text-right">
-            <div class="top-section__right__nav">
+            <div class="top-section__right__nav" (clickOutside)="toggle()">
                 <ul>
                     <li><a mat-button (click)="openInviteDialog()">Invite</a></li>
-                    <li><a href="">Company Details</a></li>
-                    <li><a href="">Manage Assessors &#38; RP</a></li>
-                    <li class="profile-thumb">
+                    <li><a [routerLink]="['/company-profile']">Company Details</a></li>
+                    <li><a (click)="toggle()">My Administration </a>
+                            <div  *ngIf="isHidden" class="drop-down">
+                                <div> <a [routerLink]="['/manageusers']">Mange Users</a></div>
+                                <div> <a [routerLink]="['/assessor-profile']">Manage Assessors &#38; RPs</a></div>
+                            </div>
+                    </li>
+                    <li (click)="toggle1()" class="profile-thumb">
                         <img src="../../assets/images/photo.png" />
+                        <div *ngIf="isHidden1" class="drop-down">
+                            <div> <a [routerLink]="['/my-profile']">My Profile</a></div>
+                            <div> <a [routerLink]="['/company-profile']">Company Profile</a></div>
+                            <div> <a [routerLink]="['/change-password']">Change Password</a></div>
+                            <div> <a [routerLink]="['/login']">Logout</a></div>
+                        </div>
                     </li>
                 </ul>
             </div>

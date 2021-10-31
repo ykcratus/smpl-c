@@ -20,6 +20,7 @@ ngOnInit() {
     userName: ['', Validators.required],
   });
 }
+  get forgetPasswordForm() { return this.forgetPassword.controls; }
 
   validateUserFromServer() {
     this.isLoading = true;
@@ -30,6 +31,9 @@ ngOnInit() {
       }, (err)=>{
         this.isLoading = false;
       }) 
+    } else {
+      this.forgetPassword.markAllAsTouched();
+      alert('Please fill all mandatory field');
     }
   }
 

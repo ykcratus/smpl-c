@@ -2,85 +2,103 @@
 <div class="main-container">
     <div class="pic-one">&#160;</div>
     <div class="pic-two">&#160;</div>
-    <div class="company-profile-box">
-        <div class="company-profile-box__left">
-            <div class="section margin-bottom">
-                <div class="section__thumbnail">
-                    <img src="../../assets/images/photo.png" />
-                </div>
-                <div class="section__field">
-                    <h1>Company Profile</h1>
-                    <div class="form-field">
-                        <input type="text" placeholder="Enter User Name *" />
+   <form  [formGroup]="myCompanyProfile" novalidate>
+        <div class="company-profile-box">
+            <div class="company-profile-box__left">
+                <div class="section margin-bottom">
+                    <div class="section__thumbnail">
+                        <img src="../../assets/images/photo.png" />
+                    </div>
+                    <div class="section__field">
+                        <h1>Company Profile</h1>
+                        <div class="form-field">
+                            <input type="text" placeholder="Enter User Name *"   formControlName="sCompanyName" />
+                        </div>
                     </div>
                 </div>
+                <div class="section margin-bottom">
+                    <div class="form-field margin-right">
+                        <input type="text" placeholder="FEIN Number *"  formControlName="sfeinNumber"  />
+                    </div>
+                    <div class="form-field">
+                        <input type="date" placeholder="Date Incorporated *"  formControlName="sDateIncorporated"  />
+                    </div>
+                </div>
+                <div class="section margin-bottom">
+                    <div class="form-field margin-right">
+                        <input type="number" placeholder="DUNS Number"  formControlName="dunsNumber"  />
+                    </div>
+                    <div class="form-field">
+                        <input type="text" placeholder="Company URL"  formControlName="url" />
+                    </div>
+                </div>
+        
+                <h1>Tell Us About You</h1>
+                <div class="section margin-bottom">
+                    <div class="form-field margin-right">
+                        <input type="text" placeholder="First Name *"  formControlName="sFirstName" />
+                    </div>
+                    <div class="form-field margin-right">
+                        <input type="text" placeholder="Middle Name"  formControlName="sMiddleName" />
+                    </div>
+                    <div class="form-field">
+                        <input type="text" placeholder="Last Name *"  formControlName="sLastName" />
+                    </div>
+                </div>
+        
+                <div class="section margin-bottom">
+                    <div class="form-field margin-right">
+                        <input type="text" placeholder="Email *" formControlName="sEmail"  />
+                    </div>
+                    <div class="form-field">
+                        <input type="text" placeholder="Title in Company *"  formControlName="sTitleInCompany" />
+                    </div>
+                </div>
+                <div class="section margin-bottom">
+                    <div class="form-field margin-right">
+                        <input type="text" placeholder="address *" formControlName="address1" />
+                    </div>
+                    <div class="form-field">
+                        <input type="number" placeholder="zipCode" formControlName="zipCode" />
+                    </div>
+                </div>
+                <div class="section margin-bottom">
+                    <div class="form-field margin-right">
+                        <input type="number" placeholder="State Id" formControlName="iStateId" />
+                    </div>
+                    <div class="form-field">
+                        <input type="number" placeholder="Country Id" formControlName="iCountryId" />
+                    </div>
+                </div>
+              
             </div>
-            <div class="section margin-bottom">
-                <div class="form-field margin-right">
-                    <input type="text" placeholder="FEIN Number *" />
+            <div class="company-profile-box__right">
+                <div class="section margin-bottom clear">
+                    <h1>&#160;</h1>
+                    <div class="input-container padding-left">
+                        US (+1)
+                        <i class="fa fa-user icon"></i>
+                        <input class="input-field" type="text" placeholder="Phone Number" name="usrnm" formControlName="phone" >
+                    </div>
                 </div>
-                <div class="form-field">
-                    <input type="text" placeholder="Date Incorporated *" />
+        
+                <!-- <div class="section margin-bottom">
+                    <div class="input-container">
+                        <i class="fa fa-user icon icon-bg"></i>
+                        <input class="input-field" type="text" placeholder="Username" name="usrnm" formControlName="sFirstName" >
+                    </div>
+                </div> -->
+        
+                <div class="map-area">MAP AREA</div>
+        
+                <button type="button" (click)="onRegister()">Register</button>
+                <div class="account-box margin-top text-center">
+                    Already have an account? <a [routerLink]="['/login']">LOGIN</a>
                 </div>
-            </div>
-            <div class="section margin-bottom">
-                <div class="form-field margin-right">
-                    <input type="text" placeholder="DUNS Number" />
-                </div>
-                <div class="form-field">
-                    <input type="text" placeholder="Company URL" />
-                </div>
-            </div>
-
-            <h1>Tell Us About You</h1>
-            <div class="section margin-bottom">
-                <div class="form-field margin-right">
-                    <input type="text" placeholder="First Name *" />
-                </div>
-                <div class="form-field margin-right">
-                    <input type="text" placeholder="Middle" />
-                </div>
-                <div class="form-field">
-                    <input type="text" placeholder="Last Name *" />
-                </div>
-            </div>
-
-            <div class="section margin-bottom">
-                <div class="form-field margin-right">
-                    <input type="text" placeholder="Email *" />
-                </div>
-                <div class="form-field">
-                    <input type="text" placeholder="Title in Company *" />
-                </div>
+        
+        
             </div>
         </div>
-        <div class="company-profile-box__right">
-            <div class="section margin-bottom clear">
-                <h1>&#160;</h1>
-                <div class="input-container padding-left">
-                    US (+1)
-                    <i class="fa fa-user icon"></i>
-                    <input class="input-field" type="text" placeholder="Username" name="usrnm">
-                </div>
-            </div>
-
-            <div class="section margin-bottom">
-                <div class="input-container">
-                    <i class="fa fa-user icon icon-bg"></i>
-                    <input class="input-field" type="text" placeholder="Username" name="usrnm">
-                </div>
-            </div>
-           
-            <div class="map-area">MAP AREA</div>
-            
-            <button type="button">Register</button>
-            <div class="account-box margin-top text-center">
-                    Already have an account?   <a [routerLink]="['/login']">LOGIN</a>
-               
-            </div>
-            
-         
-        </div>
-    </div>
+   </form>
     
 </div>

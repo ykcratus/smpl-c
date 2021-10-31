@@ -11,10 +11,12 @@ import { AssessorsComponent } from "./assessors/assessors.component";
 import { ManageUsersComponent } from "./manage-users/manage-users.component";
 import { SelfAssessmentDashbroadComponent } from "./dashboard/self-assessment-dashbroad/self-assessment-dashbroad.component";
 import { AssessmentComponent } from "./assessment/assessment.component";
+import { ChangePasswordComponent } from "./auth/change-password/change-password.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "forgot-password", component: ForgotPasswordComponent },
+  { path: "change-password", component: ChangePasswordComponent },
   { path: "company-profile", component: CompanyProfileComponent },
   { path: "assessor-profile", component: AssessorProfileComponent },
   { path: "my-profile", component: MyProfileComponent },

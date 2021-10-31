@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { InnerHeaderComponent } from "./inner-header.component";
+import { ChangePasswordComponent } from "./change-password.component";
 
-describe("InnerHeaderComponent", () => {
-  let component: InnerHeaderComponent;
-  let fixture: ComponentFixture<InnerHeaderComponent>;
+describe("UserRegisterComponent", () => {
+  let component: ChangePasswordComponent;
+  let fixture: ComponentFixture<ChangePasswordComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [InnerHeaderComponent]
+      declarations: [ChangePasswordComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InnerHeaderComponent);
+    fixture = TestBed.createComponent(ChangePasswordComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

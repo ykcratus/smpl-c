@@ -45,6 +45,8 @@ export class MyProfileComponent {
 
     })
   }
+  get myProfileForm() { return this.myProfile.controls; }
+  
   onsubmit() {
     let payload = this.myProfile.value;
     payload["iCompanyID"]= this.user.companyId;

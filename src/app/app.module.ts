@@ -22,6 +22,7 @@ import { CompanyProfileComponent } from "./profile/company-profile/company-profi
 import { LogoHeaderComponent } from "./header/logo-header/logo-header.component";
 import { AssessorProfileComponent } from "./profile/assessor-profile/assessor-profile.component";
 import { ForgotPasswordComponent } from "./auth/forgot-password/forgot-password.component";
+import { ChangePasswordComponent } from "./auth/change-password/change-password.component";
 import { MyProfileComponent } from "./profile/my-profile/my-profile.component";
 import { InnerHeaderComponent } from "./header/inner-header/inner-header.component";
 import { AdminDashboardComponent } from "./dashboard/admin-dashboard/admin-dashboard.component";
@@ -56,6 +57,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     AppComponent, 
     LoginComponent,
     ForgotPasswordComponent,
+    ChangePasswordComponent,
     MyProfileComponent,
     LogoHeaderComponent,
     InnerHeaderComponent,
