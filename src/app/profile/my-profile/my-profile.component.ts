@@ -13,7 +13,7 @@ import { SmplcService } from "src/app/shared/service/smplc.service";
 export class MyProfileComponent {
   
   constructor(private service: SmplcService, private formBuilder :FormBuilder) {
-    this.user= JSON.parse(localStorage.getItem('currentUser'))
+    this.user= JSON.parse(localStorage.getItem('SMPLUser'))
     this.getCompanyDetails();
   }
 

@@ -2,8 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { ReactiveFormsModule } from "@angular/forms";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppComponent } from "./app.component";
@@ -27,12 +26,13 @@ import { MyProfileComponent } from "./profile/my-profile/my-profile.component";
 import { InnerHeaderComponent } from "./header/inner-header/inner-header.component";
 import { AdminDashboardComponent } from "./dashboard/admin-dashboard/admin-dashboard.component";
 import { AssessorsComponent } from "./assessors/assessors.component";
-import { ManageUsersComponent } from "./manage-users/manage-users.component";
+import { ManageUsersComponent, ManageUsersDialog } from "./manage-users/manage-users.component";
 import { SelfAssessmentDashbroadComponent } from "./dashboard/self-assessment-dashbroad/self-assessment-dashbroad.component";
 import { AssessmentComponent } from "./assessment/assessment.component";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ChartsModule } from 'ng2-charts';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { SelfAssessmentDashbroadDialog } from "./dashboard/self-assessment-dashbroad/dialog/self-assessment-dashbroad-dialog.component";
 
 
 @NgModule({
@@ -58,6 +58,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     LoginComponent,
     ForgotPasswordComponent,
     ChangePasswordComponent,
+    SelfAssessmentDashbroadDialog,
     MyProfileComponent,
     LogoHeaderComponent,
     InnerHeaderComponent,
@@ -66,6 +67,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     AssessorProfileComponent,
     AssessorsComponent,
     ManageUsersComponent,
+    ManageUsersDialog,
     SelfAssessmentDashbroadComponent,
     AssessmentComponent],
   providers: [

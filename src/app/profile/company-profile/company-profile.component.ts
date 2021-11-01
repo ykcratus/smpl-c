@@ -11,6 +11,7 @@ import { SmplcService } from "src/app/shared/service/smplc.service";
   styleUrls: ["./company-profile.component.scss"],
 })
 export class CompanyProfileComponent {
+  countryList: any;
   
   constructor(private service: SmplcService, private formBuilder : FormBuilder) {}
   myCompanyProfile: FormGroup;
@@ -18,6 +19,7 @@ export class CompanyProfileComponent {
   ngOnInit() {
     this.createForm()
     this.updateCompanyDetails()
+    this.getAllcountryList();
   }
 
   createForm () {
@@ -60,6 +62,16 @@ export class CompanyProfileComponent {
 
      })
    }
+
+   getAllcountryList(){
+     this.service.getAllCountry().subscribe((res)=> {
+       this.countryList = res.items;
+     },(err)=>{})
+   }
+
+  onSelect(){
+    console.log(this.myCompanyProfileForm.controls['iCountryId'])
+  }
 
 
 }

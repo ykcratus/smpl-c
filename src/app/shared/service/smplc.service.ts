@@ -73,5 +73,39 @@ export class SmplcService {
       }));
   }
 
+  createNewUser(payload) {
+    return this.http.post(endPoints.createNew, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
 
+  getAllCountry() {
+    return this.http.get(endPoints.getAllCountry)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  } 
+
+  getallUserList(payload) {
+    return this.http.post(endPoints.getAllUsers, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+
+  saveNewUser(payload) {
+    return this.http.post(endPoints.saveUser, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  } 
+
+  getSubscriptionById(payload) {
+    return this.http.post(endPoints.subscriptionById, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  } 
 }

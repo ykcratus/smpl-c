@@ -20,7 +20,7 @@ export class AuthService {
       .pipe(map((data: any) => {
         let user = data;
         if (user){
-          localStorage.setItem('currentUser', JSON.stringify(user));
+          localStorage.setItem('SMPLUser', JSON.stringify(user));
         }
         return user;
       }), catchError((err) => {

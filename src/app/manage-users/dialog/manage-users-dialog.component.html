@@ -1,29 +1,32 @@
 <div class="manage-user-container">
-    <div class="manage-user-container__form">
-        <h1>Manage User</h1>
-        <div class="form-field">
-            <div class="form-field__box">
-                <ul>
-                    <li><input type="text" placeholder="First Name *"/></li>
-                    <li><input type="text" placeholder="Middle"/></li>
-                    <li><input type="text" placeholder="Last Name *"/></li>
-                </ul>
+<form [formGroup]="createUserForm" novalidate>
+        <div class="manage-user-container__form">
+            <h1>Add User</h1>
+            <div class="form-field">
+                <div class="form-field__box">
+                    <ul>
+                        <li><input type="text" placeholder="First Name *"  formControlName="sFirstName"  /></li>
+                        <li><input type="text" placeholder="Middle"  formControlName="sFirstName" /></li>
+                        <li><input type="text" placeholder="Last Name *"  formControlName="sFirstName"   /></li>
+                    </ul>
+                </div>
+                <div class="form-field__input">
+                    <input type="text" placeholder="Title in Company" formControlName="sFirstName" />
+                </div>
+                <div class="form-field__input">
+                    <input type="text" placeholder="Email *" formControlName="sFirstName"  />
+                </div>
             </div>
-            <div class="form-field__input">
-                <input type="text" placeholder="Title in Company" />
-            </div>
-            <div class="form-field__input">
-                <input type="text" placeholder="Email *"/>
-            </div>
-        </div>
         
-            
-        <div class="bottom-container">
-            <button mat-button mat-dialog-close>Submit</button>
-            <button mat-button mat-dialog-close class="cancel">Cancel</button>
+        
+            <div class="bottom-container">
+                <button mat-button mat-dialog-close>Submit</button>
+                <button mat-button mat-dialog-close class="cancel">Cancel</button>
+            </div>
         </div>
-    </div>
+ 
     <div class="manage-user-container__image">
         <img src="../../../assets/images/manage-user.svg" width="250"/>
     </div>
+     </form>
 </div>

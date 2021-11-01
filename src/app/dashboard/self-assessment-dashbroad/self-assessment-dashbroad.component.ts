@@ -4,6 +4,7 @@ import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator, PageEvent } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
 import { SmplcService } from 'src/app/shared/service/smplc.service';
+import { SelfAssessmentDashbroadDialog } from "./dialog/self-assessment-dashbroad-dialog.component";
 
 @Component({
   selector: "app-self-assessment-dashbroad",
@@ -275,36 +276,6 @@ export class SelfAssessmentDashbroadComponent {
     // }, (err)=> {
 
     // })
-  }
-
-}
-
-
-@Component({
-  selector: 'self-assessment-dashbroad-dialog',
-  templateUrl: 'dialog/self-assessment-dashbroad-dialog.component.html',
-  styleUrls:['dialog/self-assessment-dashbroad-dialog.component.scss']
-})
-export class SelfAssessmentDashbroadDialog {
-  listData: any;
-
-  constructor(private service: SmplcService){}
-
-  ngOnInit() {
-    this.getselfAssesmetList();
-  }
-
-  getselfAssesmetList() {
-    let payload = {
-      "request": {
-        "token": JSON.parse(localStorage.getItem('currentUser')).token,
-      },
-      "pageSize": 0,
-      "pageNumber": 0
-    }
-    this.service.assesmentList(payload).subscribe((res)=> {
-       this.listData = res.items;
-    }, (err)=> {})
   }
 
 }

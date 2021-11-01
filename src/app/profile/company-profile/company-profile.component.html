@@ -67,8 +67,12 @@
                         <input type="number" placeholder="State Id" formControlName="iStateId" />
                     </div>
                     <div class="form-field">
-                        <input type="number" placeholder="Country Id" formControlName="iCountryId" />
+                        <!-- <input type="number" placeholder="Country Id" formControlName="iCountryId" /> -->
+                        <select formControlName="iCountryId" (change)="onSelect()">
+                            <option *ngFor="let obj of countryList" [value]="obj.iCountryId">{{obj.sCountryName}}</option>
+                        </select>
                     </div>
+
                 </div>
               
             </div>

@@ -9,5 +9,13 @@ export const endPoints = {
     companyUdate: baseUrl +'SMPLService/updateorgprofile',
     companyById: baseUrl +'SMPLService/getcompanyidbyid',
     accessorLogin: baseUrl + 'api/Authentication/AssessorLoginWithCompanyId',
-    changePassword: baseUrl + 'api/Authentication/ChangePassword'
+    changePassword: baseUrl + 'api/Authentication/ChangePassword',
+    createNew: baseUrl + 'api/Authentication/createuser',
+    getAllCountry: baseUrl + 'SMPLService/getallcountry',
+    getAllUsers: baseUrl + 'SMPLService/getallcompanyusermaster',
+    saveUser: baseUrl + 'SMPLService/save',
+    subscriptionById: baseUrl +'SMPLService/Getlevelsubscriptiontypeid',
+    getCitybyId: baseUrl + '/SMPLService/getallcity'
+
 }
+

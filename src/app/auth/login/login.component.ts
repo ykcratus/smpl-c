@@ -35,8 +35,10 @@ export class LoginComponent {
     if(this.loginForm.valid){
      let payload = this.loginForm.value;
       this.service.login(payload).subscribe((res)=> {
-        if(res) {   
+        if (res.isSuccess) {
           this.router.navigate(['/selfassessment-dashbroad'])
+        } else {
+          alert(res.successMessage)
         }
       },(err)=> {})
     } else {

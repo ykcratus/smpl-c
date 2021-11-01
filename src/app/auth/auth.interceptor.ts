@@ -23,11 +23,11 @@ export class AuthInterceptor implements HttpInterceptor {
           "Access-Control-Allow-Origin": "*",
           "accept": "text/plain",
           "Content-Type": "application/json",
-          "Authorization": JSON.parse(localStorage.getItem('currentUser')).token,
+          "Authorization": JSON.parse(localStorage.getItem('SMPLUser')).token,
         }
       });
       if (req.method === "POST") {
-          req.body['token'] = JSON.parse(localStorage.getItem('currentUser')).token;
+          req.body['token'] = JSON.parse(localStorage.getItem('SMPLUser')).token;
       }
 
 

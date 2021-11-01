@@ -27,6 +27,10 @@ export class InnerHeaderComponent {
     this.isHidden1 = !this.isHidden1;
   }
 
+  logout() {
+    localStorage.removeItem('SMPLUser');
+  }
+
 
 }
 
@@ -45,7 +49,7 @@ export class InviteDialog {
   getselfAssesmetList() {
     let payload = {
       "request": {
-        "token": JSON.parse(localStorage.getItem('currentUser')).token,
+        "token": JSON.parse(localStorage.getItem('SMPLUser')).token,
       },
       "pageSize": 0,
       "pageNumber": 0
@@ -54,5 +58,6 @@ export class InviteDialog {
      // this.listData = res.items;
     }, (err) => { })
   }
+
 
 }

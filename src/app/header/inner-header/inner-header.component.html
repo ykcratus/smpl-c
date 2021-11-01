@@ -25,7 +25,7 @@
                             <div> <a [routerLink]="['/my-profile']">My Profile</a></div>
                             <div> <a [routerLink]="['/company-profile']">Company Profile</a></div>
                             <div> <a [routerLink]="['/change-password']">Change Password</a></div>
-                            <div> <a [routerLink]="['/login']">Logout</a></div>
+                            <div> <a [routerLink]="['/login']" (click)="logout()">Logout</a></div>
                         </div>
                     </li>
                 </ul>
