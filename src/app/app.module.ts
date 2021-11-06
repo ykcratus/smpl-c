@@ -71,7 +71,7 @@ import { SelfAssessmentDashbroadDialog } from "./dashboard/self-assessment-dashb
     SelfAssessmentDashbroadComponent,
     AssessmentComponent],
   providers: [
-    //{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

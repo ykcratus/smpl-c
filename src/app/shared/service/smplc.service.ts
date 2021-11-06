@@ -39,6 +39,21 @@ export class SmplcService {
       }));
   }
 
+  deleteAssesmentbyId(param) {
+    return this.http.post(endPoints.deleteAssesment, param)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+
+  deleteUserbyId(param) {
+    return this.http.post(endPoints.deleteUser, param)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
   assesmentList(param) {
     return this.http.post(endPoints.subscription, param)
       .pipe(map((response: any) => {
@@ -108,4 +123,18 @@ export class SmplcService {
         return response;
       }));
   } 
+
+  lockUser(payload) {
+    return this.http.post(endPoints.lockUser, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+  unlockUser(payload) {
+    return this.http.post(endPoints.unlockUser, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
 }

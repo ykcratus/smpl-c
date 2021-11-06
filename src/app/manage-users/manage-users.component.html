@@ -40,7 +40,8 @@
                                 </ul>
                             </div>
                             <div class="right">
-                                <mat-icon class="message">message</mat-icon>
+                                <mat-icon class="message" (click)="lockUser(item)"> lock</mat-icon>
+                                <mat-icon class="open-lock" (click)="unlockUser(item)">lock_open</mat-icon>
                             </div>
                         </li>
                         <li>
@@ -51,93 +52,7 @@
                                 </ul>
                             </div>
                             <div class="right">
-                                <mat-icon class="lock">lock</mat-icon>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="list-container__item">
-                <div class="list-container__item__image">
-                    IMAGE
-                </div>
-                <div class="list-container__item__inner-list">
-                    <ul>
-                        <li>
-                            <div class="left">
-                                <ul>
-                                    <li>Name</li>
-                                    <li>James Junandi</li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <mat-icon class="edit">edit</mat-icon>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <ul>
-                                    <li>Title In Company</li>
-                                    <li>SOS Specialist</li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <mat-icon class="message">message</mat-icon>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <ul>
-                                    <li>Email</li>
-                                    <li>jamesjunaidi@yopmail.com</li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <mat-icon class="lock">lock</mat-icon>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="list-container__item">
-                <div class="list-container__item__image">
-                    IMAGE
-                </div>
-                <div class="list-container__item__inner-list">
-                    <ul>
-                        <li>
-                            <div class="left">
-                                <ul>
-                                    <li>Name</li>
-                                    <li>James Junandi</li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <mat-icon class="edit">edit</mat-icon>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <ul>
-                                    <li>Title In Company</li>
-                                    <li>SOS Specialist</li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <mat-icon class="message">message</mat-icon>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <ul>
-                                    <li>Email</li>
-                                    <li>jamesjunaidi@yopmail.com</li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <mat-icon class="lock">lock</mat-icon>
+                                <mat-icon class="lock" (click)="deleteUser(item)">delete</mat-icon>
                             </div>
                         </li>
                     </ul>

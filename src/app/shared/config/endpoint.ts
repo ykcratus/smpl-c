@@ -2,7 +2,7 @@ let baseUrl = "http://13.82.6.102:8000/"
 
 export const endPoints = {
     auth_user: baseUrl + 'api/Authentication/login',
-    dashboard: baseUrl +'api/SMPLService/getallcompanyassessment',
+    dashboard: baseUrl +'SMPLService/getallcompanyassessment',
     companyAssesment: baseUrl +'api/SMPLService/getallcompanyassessment',
     vaidateEmail: baseUrl + 'api/Authentication/validateemailuser',
     subscription : baseUrl +'SMPLService/getallsubscription',
@@ -15,7 +15,11 @@ export const endPoints = {
     getAllUsers: baseUrl + 'SMPLService/getallcompanyusermaster',
     saveUser: baseUrl + 'SMPLService/save',
     subscriptionById: baseUrl +'SMPLService/Getlevelsubscriptiontypeid',
-    getCitybyId: baseUrl + '/SMPLService/getallcity'
+    getCitybyId: baseUrl + '/SMPLService/getallcity',
+    deleteAssesment: baseUrl +'SMPLService/deleteaseesmentdetails',
+    deleteUser: baseUrl + 'SMPLService/deletecopmanyuser',
+    lockUser: baseUrl + 'SMPLService/suspendcopmanyuser',
+    unlockUser: baseUrl + 'SMPLService/updatesuspendcopmanyuser'
 
 }
 

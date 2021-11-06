@@ -20,15 +20,15 @@ export class AuthInterceptor implements HttpInterceptor {
 
       this.authReq = req.clone({
         setHeaders: {
-          "Access-Control-Allow-Origin": "*",
+          // "Access-Control-Allow-Origin": "*",
           "accept": "text/plain",
           "Content-Type": "application/json",
-          "Authorization": JSON.parse(localStorage.getItem('SMPLUser')).token,
+          // "Authorization": JSON.parse(localStorage.getItem('SMPLUser')).token,
         }
       });
-      if (req.method === "POST") {
-          req.body['token'] = JSON.parse(localStorage.getItem('SMPLUser')).token;
-      }
+      // if (req.method === "POST") {
+      //     req.body['token'] = JSON.parse(localStorage.getItem('SMPLUser')).token;
+      // }
 
 
     return next.handle(this.authReq).pipe(
