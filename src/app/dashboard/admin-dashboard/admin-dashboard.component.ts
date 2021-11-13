@@ -3,6 +3,7 @@ import { AfterViewInit, ViewChild } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator, PageEvent } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
+import { SmplcService } from "src/app/shared/service/smplc.service";
 
 @Component({
   selector: "app-admin-dashboard",
@@ -11,10 +12,18 @@ import { MatTableDataSource } from "@angular/material/table";
 })
 export class AdminDashboardComponent {
   
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private service: SmplcService) {}
 
   openDialog() {
     this.dialog.open(AdminDialog);
+  }
+
+  lockCompany(args) {
+    let payload = {}
+    this.service.uploadAssessorProfile(payload).subscribe((res) => {
+
+    }, (err) => { })
+
   }
 }
 
@@ -24,4 +33,14 @@ export class AdminDashboardComponent {
   templateUrl: 'dialog/admin-dialog.component.html',
   styleUrls:['dialog/admin-dialog.component.scss']
 })
-export class AdminDialog {}
+export class AdminDialog {
+  constructor(private service: SmplcService) { }
+    addUser () {
+        let payload = {}
+        this.service.saveNewUser(payload).subscribe((res) => {
+
+        }, (err) => { })
+
+    }
+
+}

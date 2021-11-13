@@ -25,7 +25,7 @@ export class SmplcService {
 // }
 
   validateUser(param) {
-    return this.http.post(endPoints.vaidateEmail, param)
+    return this.http.post(endPoints.validateEmail, param)
       .pipe(map((response: any) => {
         return response;
       }));
@@ -62,7 +62,7 @@ export class SmplcService {
   }
 
     updateCompanyDetails(payload) {
-      return this.http.post(endPoints.companyUdate, payload)
+      return this.http.post(endPoints.companyUpdate, payload)
         .pipe(map((response: any) => {
           return response;
         }));
@@ -133,6 +133,42 @@ export class SmplcService {
 
   unlockUser(payload) {
     return this.http.post(endPoints.unlockUser, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+  copyAssesment (payload) {
+    return this.http.post(endPoints.companyAssesment, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+  dashboardDownload(payload) {
+    return this.http.post(endPoints.downloadDashboad, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+  uploadCompanyProfile(payload) {
+    return this.http.post(endPoints.uploadCompanyPhoto, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+  uploadAssessorProfile(payload) {
+    return this.http.post(endPoints.uploadAssessor, payload)
+      .pipe(map((response: any) => {
+        return response;
+      }));
+  }
+
+
+  lockAssesment(payload) {
+    return this.http.post(endPoints.lockAssesment, payload)
       .pipe(map((response: any) => {
         return response;
       }));

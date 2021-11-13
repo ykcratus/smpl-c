@@ -3,6 +3,7 @@ import { AfterViewInit, ViewChild } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { MatPaginator, PageEvent } from "@angular/material/paginator";
 import { MatTableDataSource } from "@angular/material/table";
+import { Router } from "@angular/router";
 import { SmplcService } from 'src/app/shared/service/smplc.service';
 import { SelfAssessmentDashbroadDialog } from "./dialog/self-assessment-dashbroad-dialog.component";
 
@@ -13,7 +14,7 @@ import { SelfAssessmentDashbroadDialog } from "./dialog/self-assessment-dashbroa
 })
 export class SelfAssessmentDashbroadComponent {
   assesmentList: any;
-  constructor(public dialog: MatDialog, private service: SmplcService) {}
+  constructor(public dialog: MatDialog, private service: SmplcService, private route: Router) {}
 
   openDialog() {
     this.dialog.open(SelfAssessmentDashbroadDialog);
@@ -49,5 +50,52 @@ export class SelfAssessmentDashbroadComponent {
 
     })
   }
+
+  copyAssesment(data:any ){
+    let payload = {
+        "sAssessmentName": data.sAssessmentName,
+        "iLevelId": data.iLevelId,
+      "iCompanyAssessmentID": data.iCompanyAssessmentID,
+      "iCompanyID": data.iCompanyID,
+      "iAssentStatusId": data.iAssentStatusId,
+      }
+       this.service.copyAssesment(payload).subscribe((res) => {
+         alert('Copied sucessfully')
+       }, (err) => {
+
+       })
+  }
+
+  navigate (args) {
+    this.route.navigate(['assessment'])
+  }
+
+  onDownload(args) {
+    console.log(args)
+    let payload = {
+      "request": {
+        "tenantId": 0,
+        "token": JSON.parse(localStorage.getItem('SMPLUser')).token,
+        "iDocId": 0,
+        // "sDocName": "string",
+        // "sName": "string",
+        // "sFileContent": "string",
+        "assessmentId": 0,
+        "iUserId": 0,
+        "questionId": 0,
+        "docIdList": [
+          0
+        ]
+      },
+      "pageSize": 0,
+      "pageNumber": 0
+    }
+    this.service.dashboardDownload(payload).subscribe((res) => {
+
+    }, (err) => { })
+
+  }
+
+
 
 }

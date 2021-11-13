@@ -60,13 +60,13 @@
                             <div class="right">
                                 <ul>
                                     <li>
-                                        <mat-icon class="edit">edit</mat-icon>
+                                        <mat-icon class="edit" (click)="copyAssesment(item)">file_copy</mat-icon>
                                     </li>
                                     <li>
-                                        <mat-icon class="message">message</mat-icon>
+                                        <mat-icon class="message" (click)="navigate(item)">remove_red_eye</mat-icon>
                                     </li>
                                     <li>
-                                        <mat-icon class="font_download">vertical_align_bottom</mat-icon>
+                                        <mat-icon class="font_download" (click)="onDownload(item)">vertical_align_bottom</mat-icon>
                                     </li>
                                     <li>
                                         <mat-icon class="lock" (click)="onDelete(item)">delete</mat-icon>

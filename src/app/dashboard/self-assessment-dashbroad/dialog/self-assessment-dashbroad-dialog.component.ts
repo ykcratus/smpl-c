@@ -46,8 +46,8 @@ export class SelfAssessmentDashbroadDialog {
       "request": {
           "tenantId": 0,
               "iSubscriptionID": 0,
-                "sSubscriptionName": "string",
-                  "sLevel": "string"
+                // "sSubscriptionName": "string",
+                //   "sLevel": "string"
       },
       "pageSize": 0,
         "pageNumber": 0
@@ -56,4 +56,6 @@ export class SelfAssessmentDashbroadDialog {
       this.listData = res.items;
     }, (err) => { })
   }
+
+
 }

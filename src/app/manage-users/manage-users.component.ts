@@ -49,7 +49,16 @@ export class ManageUsersComponent {
   }
 
   deleteUser(args) {
-    let payload = {}
+    let payload = {
+      "request": {
+        "token": "string",
+        "iUserId": 0,
+        "iCompanyID": 0,
+        "iRoleId": 0
+      },
+      "pageSize": 0,
+      "pageNumber": 0
+    }
     this.service.deleteUserbyId(payload).subscribe((res) => {
       console.log(res)
     }, (err) => {
@@ -59,7 +68,16 @@ export class ManageUsersComponent {
 
 
   lockUser(arg) {
-    let payload = {}
+    let payload = {
+      "request": {
+        "token": "string",
+        "iUserId": 0,
+        "iCompanyID": 0,
+        "iRoleId": 0
+      },
+      "pageSize": 0,
+      "pageNumber": 0
+    }
     this.service.lockUser(payload).subscribe((res) => {
       console.log(res)
     }, (err) => {
@@ -69,7 +87,16 @@ export class ManageUsersComponent {
 
 
   unlockUser(arg) {
-    let payload = {}
+    let payload = {
+      "request": {
+        "token": "string",
+        "iUserId": 0,
+        "iCompanyID": 0,
+        "iRoleId": 0
+      },
+      "pageSize": 0,
+      "pageNumber": 0
+    }
     this.service.unlockUser(payload).subscribe((res) => {
       console.log(res)
     }, (err) => {
@@ -105,13 +132,22 @@ export class ManageUsersDialog {
   }
 
   createUser() {
-    let payload = { }
+    let payload = {
+      "email": this.createUserForm.controls['email'].value ,
+      "password": "string",
+      "confirmPassword": "string",
+      "userRole": "string",
+      "userTypeId": 0,
+      "companyId": 0
+    }
     this.service.createNewUser(payload).subscribe((res) => {
       console.log(res)
     }, (err) => {
 
     })
   }
+
+  
 
 
 }

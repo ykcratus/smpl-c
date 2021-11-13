@@ -73,6 +73,14 @@ export class CompanyProfileComponent {
     console.log(this.myCompanyProfileForm.controls['iCountryId'])
   }
 
+  upload() {
+    let payload = {};
+    this.service.uploadCompanyProfile(payload).subscribe((res) => {
+      this.countryList = res.items;
+    }, (err) => { })
+
+  }
+
 
 }
 

@@ -27,7 +27,7 @@ export class MyProfileComponent {
   getCompanyDetails() {
     let payload = {
       "request": {
-        "iCompanyID": this.user.companyId
+        "iCompanyID": this.user.companyId? 61:61
       },
       "pageSize": 0,
       "pageNumber": 0
